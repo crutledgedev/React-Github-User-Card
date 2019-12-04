@@ -1,12 +1,21 @@
-import React from "react";
+import React from 'react';
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
-function FollowerCard(props) {
+const FollowerCard = (props) => {
   return (
     <div>
-      <img src={props.avatar_url}></img>
-      <h3>Username: {props.login}</h3>
+      <Card>
+        <CardImg top width="25%" src={props.avatar_url} alt="Card image cap" />
+        <CardBody>
+          <CardTitle>Username: {props.login}</CardTitle>
+          <Button>GitHub Repository</Button>
+        </CardBody>
+      </Card>
     </div>
   );
-}
+};
 
 export default FollowerCard;
