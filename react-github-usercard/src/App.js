@@ -16,16 +16,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://api.github.com/users/crutledgedev").then(response => {
-      this.setState({ mainUser: response.data });
-      console.log(this.state.mainUser);
+    axios.get("https://api.github.com/users/crutledgedev")
+          .then(response => {
+          this.setState({ mainUser: response.data });
+          console.log(this.state.mainUser);
+          console.log("main user response", response.data)
     });
 
     axios
       .get("https://api.github.com/users/crutledgedev/followers")
       .then(response => {
         this.setState({ followers: response.data });
-        console.log(response);
+        console.log("followers", response);
       });
   }
 
