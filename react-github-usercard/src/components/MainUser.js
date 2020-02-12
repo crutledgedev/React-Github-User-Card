@@ -11,6 +11,7 @@ function MainUser({ mainUser }) {
         <p>Location: {mainUser.location}</p>
         <p>Followers: {mainUser.followers}</p>
         <p>Following: {mainUser.following}</p>
+        <a href={mainUser.html_url}>Git Hub</a>
       </div>
     </div>
   );

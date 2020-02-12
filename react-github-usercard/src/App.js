@@ -27,7 +27,7 @@ class App extends React.Component {
       .get("https://api.github.com/users/crutledgedev/followers")
       .then(response => {
         this.setState({ followers: response.data });
-        console.log("followers", response);
+        console.log("followers", response.data);
       });
   }
 
